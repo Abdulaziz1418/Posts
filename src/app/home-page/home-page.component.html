@@ -1,0 +1,39 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" routerLink="/home">Home</a>
+            <a class="navbar-brand">Abdulaziz Alsaffar</a>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3" *ngFor='let i of posts | slice: (page-1) * pageSize : page * pageSize'>
+                <div class="card" style="width: 18rem; ">
+                    <div class="card-body">
+
+                        <p class="card-text"><span>ID:</span> {{i.id}}</p>
+                        <p class="card-text"><span>Title:</span> {{i.title}}</p>
+
+                        <a class="btn btn-primary btn-lg btn-block" (click)="openPostsDetails(i.id)"
+                            style="text-align: center;">Details</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pagination">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [maxSize]="5" [rotate]="true"
+            [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+    </div>
+
+</body>

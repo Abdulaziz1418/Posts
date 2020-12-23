@@ -1,0 +1,10 @@
+.card{
+    text-align: left;
+    position: relative; left: 7px;
+    background-color: rgba(128, 128, 128, 0.281);
+}
+
+span {
+    font-weight: bold;
+    color: darkred;
+}

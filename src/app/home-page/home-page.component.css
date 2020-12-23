@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(128, 128, 128, 0.281);
+
+}
+.card{
+    text-align: center;
+}
+
+.card-text {
+    text-align: left;
+    height: 60px; 
+   width:auto; 
+}
+
+span {
+    font-weight: bold;
+    color: darkred;
+}
+.col-sm-3{
+    padding-bottom: 1cm;
+
+
+}
+
+.pagination {
+   
+   padding-left: 12cm;
+}
